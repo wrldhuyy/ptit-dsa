@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin >> t;
+	while(t--){
+		int n;
+		cin >> n;
+		vector<int> a(n);
+		for(int &x : a) cin >> x;
+		int cur_sum = 0;
+		int max_sum = 0;
+		for(int i = 0 ; i < n; i++){
+			cur_sum = max(a[i] , cur_sum + a[i]);
+			max_sum = max(max_sum, cur_sum);
+			
+		}
+		cout << max_sum << endl;
+	}
+	
+}
